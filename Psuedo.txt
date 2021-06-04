@@ -1,5 +1,17 @@
 --Psuedocode--
 
+Personal Notes:
+
+Each row(7) is a nested array of 6 slots
+
+index 0 is bottom row
+index 1 is next row
+
+winner:
+checking around the most recent moves position 
+
+---
+
 #Var
 -Game state: Win/Loss/Tie/Ingame
 
@@ -15,13 +27,13 @@ Set gameboard / reset variables to array/grid 7 x 6 squares in size
 
 RNG to decide player 1
 
-if square clicked {
-	note their piece in the gameboard's array
+if collumn clicked {
+	note their piece on the top position on that column in gameboard's array
 	switch to next player's turn
-	check for 4 of the same peice in a row
+	check for 4 of the same peice in a row based on last updated position
 }
 
-if (4 in a row) 
+if (4 in a row, relative to last click position) 
 	set game to winner
 else if (gameboard full) 
 	set game to tie and offer reset
