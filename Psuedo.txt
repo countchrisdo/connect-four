@@ -1,0 +1,42 @@
+--Psuedocode--
+
+#Var
+-Game state: Win/Loss/Tie/Ingame
+
+#Const
+-Gameboard
+
+#Gameplay
+
+Define required constants and variables including refrencing DOM
+
+Set gameboard / reset variables to array/grid 7 x 6 squares in size
+-42 spaces total
+
+RNG to decide player 1
+
+if square clicked {
+	note their piece in the gameboard's array
+	switch to next player's turn
+	check for 4 of the same peice in a row
+}
+
+if (4 in a row) 
+	set game to winner
+else if (gameboard full) 
+	set game to tie and offer reset
+else 
+	continue game
+	
+
+
+
+
+
+
+
+
+
+
+
+
