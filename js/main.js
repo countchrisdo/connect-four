@@ -21,26 +21,30 @@ function init() {
     //rng to find 1st player 
     const randomIdx = Math.floor(Math.random() * 2);
     if(randomIdx == 0){playerTurn = "X"} else {playerTurn = "O"}
-
-    turnsTaken = 0;
-    turnsTakenLog = "Turns taken so far: " + turnsTaken;
-    gameStatus = "inGame";
-    console.log("Variable's Reset");
-
-    //Clear each square
-    for (let i = 0; i < squares.length; i++) {
-        squares[i].value = "";
-    }
     
-    render();
+    board = [
+        [0, 0, 0, 0, 0, 0],  // Column 0
+        [0, 0, 0, 0, 0, 0],  // Column 1
+        [0, 0, 0, 0, 0, 0],  // Column 2
+        [0, 0, 0, 0, 0, 0],  // Column 3
+        [0, 0, 0, 0, 0, 0],  // Column 4
+        [0, 0, 0, 0, 0, 0],  // Column 5
+        [0, 0, 0, 0, 0, 0],  // Column 6
+      ];
+      console.log("Variable's Reset");
+      render();
 }
-
 function render() {
-    renderSquares();
-    renderMessage();
-    playerTurnLog = "Player 1 this game is: " + playerTurn;
-    turnsTakenLog = "Turns taken so far: " + turnsTaken;
-    GameLog();
+    // itterate over each column in  board
+    board.forEach((column, columnidx) => {
+        // itterate over each cell in column
+        column.forEach((cell, cellidx) => {
+            // find specific cell using columnidx and cellidx
+            let div = document.getElementById(`c${columnidx}r${cellidx}`);
+            div.style.backgroundColor = colors[cell];
+        })
+    });
+    
     //only show replay button at the end of the game
     if (gameStatus == "inGame") {
         replayEl.style.visibility = "hidden"

@@ -4,10 +4,6 @@
     
 }
 
-:root {
-    --perfect-blue: #b1d4ec;
-}
-
 body {
 margin: 0;
 height: 100vh;
@@ -32,7 +28,6 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 }
 
 ul {
@@ -59,8 +54,7 @@ section button {
     height: 5vmin;
     margin: 0.5vmin;
     border: 0.4vmin solid grey;
-    border-radius: 1vmin;
-    
+    border-radius: 1vmin; 
 }
 
 #replay {
@@ -79,15 +73,15 @@ section button {
     color: black;
   }
 
-  #error {
+#error {
       display: none;
   }
 
-.X {
-    background-color:cyan;
+.black {
+    background-color:rgb(2, 37, 37);
 }
-.O {
-    background-color:pink;
+.red {
+    background-color:rgb(245, 80, 108);
 }
 
 @media (max-width: 600px) {

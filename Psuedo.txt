@@ -8,7 +8,7 @@ index 0 is bottom row
 index 1 is next row
 
 winner:
-checking around the most recent moves position 
+checking for a winner around the most recent moved position 
 
 ---
 
@@ -40,15 +40,5 @@ else if (gameboard full)
 else 
 	continue game
 	
-
-
-
-
-
-
-
-
-
-
 
 
