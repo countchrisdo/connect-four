@@ -1,23 +1,15 @@
 * {
-    box-sizing: border-box;
-    font-family: Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif;
-    
+    box-sizing: border-box; 
 }
 
 body {
 margin: 0;
-height: 100vh;
-display: grid;
-grid-template-rows: auto 1fr;
 }
 
 header {
 font-size: 6vmin;
 padding: 1vmin;
-background-image: repeating-linear-gradient(rgba(0, 0, 255, 0.452), rgba(255, 192, 203, 0.486), rgba(255, 255, 255, 0.39)),
-  url("https://i.redd.it/pujyuh2w3gs51.png");
-color: white;
-text-shadow: -1px 0 grey, 0 1px grey, 1px 0 grey, 0 -1px grey;
+color: black;
 text-align: center;
 letter-spacing: 0.5vmin;
 font-size: 5vmin;
@@ -25,36 +17,42 @@ font-size: 5vmin;
 
 main {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-ul {
-    margin: 1vmin;
+table {
+    margin-left: auto;
+    margin-right: auto;
+    border:1vmin solid black;
+    border-radius: 2vmin;
+    background:blue;
+}
+#gameBoard {
+    background-color: whitesmoke;
+
 }
 
-ul li:hover {
-    background: #ddd;
-  }
-
-div input{
-    width: 15vh;
-    height: 15vh;
+td.slot{
+    width: 12vh;
+    height: 12vh;
     margin: auto;
-    font-size: 100px;
     cursor: pointer;
-    text-align: center;
+    background-color: whitesmoke;
+    border-radius: 50%;
 }
 
-section button {
-    font-size: 3vmin;
-    font-weight: bold;
-    width: 5vmin;
-    height: 5vmin;
-    margin: 0.5vmin;
-    border: 0.4vmin solid grey;
-    border-radius: 1vmin; 
+td.black {
+    background-color:rgb(3, 12, 12);
+}
+td.red {
+    background-color:rgb(245, 80, 108);
+}
+
+#meta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #replay {
@@ -68,7 +66,8 @@ section button {
     outline: none;
     cursor: pointer;
   }
-#replay:hover {
+
+  #replay:hover {
     background-color: rgba(0, 255, 255, 0.199);
     color: black;
   }
@@ -76,13 +75,6 @@ section button {
 #error {
       display: none;
   }
-
-.black {
-    background-color:rgb(2, 37, 37);
-}
-.red {
-    background-color:rgb(245, 80, 108);
-}
 
 @media (max-width: 600px) {
     .cell {background-color: red;}
