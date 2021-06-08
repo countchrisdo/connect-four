@@ -9,6 +9,8 @@ body {
     background-color: lightgrey;
     justify-content: center;
     align-items: center;
+    background-image: url("img/tile.png");
+    image-rendering: crisp-edges;
 }
 
 main {
@@ -37,7 +39,7 @@ h2 {
     align-content: center;
 }
 
-#column-buttons {
+#choiceButtons {
     display: grid;
     background-color: #95fff7;
     grid-template-columns: repeat(7, 10vmin);
@@ -48,7 +50,7 @@ h2 {
     justify-content: center;
 }
 
-#column-buttons > div {
+#choiceButtons > div {
     border: .5vmin solid black;
     background-color: whitesmoke;
     align-content: center;
