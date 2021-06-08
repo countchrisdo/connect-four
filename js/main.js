@@ -1,7 +1,7 @@
 /*----- constants -----*/
 const colors = {
     '1' : "#ffc2e2", //red
-    '-1' : "#bbbaff", //black
+    '-1' : "black", //black
     '0' : "#f7fcff" //white
 }
 
