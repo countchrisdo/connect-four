@@ -18,11 +18,13 @@ main {
     border: black .5vh solid;
 }
 
-h2 {
+h1 {
     text-align: center;
     margin-top: 1vmin;
-    color: white;
-    -webkit-text-stroke: .1vh black;
+    font-weight: bold;
+    font-size: 5vh;
+    color: whitesmoke;
+    -webkit-text-stroke: .3vh black;
 }
 
 #gameboard {
@@ -40,6 +42,7 @@ h2 {
     border: black .5vh solid;
     background-color: whitesmoke;
     align-content: center;
+    cursor: not-allowed;
 }
 
 #choiceButtons {
@@ -51,6 +54,7 @@ h2 {
     gap: 1vmin;
     width: 77vmin;
     justify-content: center;
+    cursor: pointer;
 }
 
 #choiceButtons > div {
