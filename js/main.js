@@ -1,14 +1,8 @@
 /*----- constants -----*/
 const colors = {
-<<<<<<< HEAD
     '1' : "#ffc2e2", //red
     '-1' : "black", //black
     '0' : "#f7fcff" //white
-=======
-  '-1': "#bbbaff", //black
-  '0': "#f7fcff", //white
-  '1': "#ffc2e2" //red
->>>>>>> master
 }
 
 const TOTALTURNS = 42;
