@@ -9,7 +9,7 @@ body {
     background-color: lightgrey;
     justify-content: center;
     align-items: center;
-    background-image: url("img/tile.png");
+    background-image: url("tile.png");
     image-rendering: crisp-edges;
 }
 
