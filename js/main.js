@@ -35,7 +35,6 @@ function init() {
     playerTurn = -1
   }
 
-
   turnsTaken = 0;
   winner = null;
   board = [
