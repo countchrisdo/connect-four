@@ -4,17 +4,8 @@ const colors = {
     '-1' : "#bbbaff", //black
     '0' : "#f7fcff" //white
 }
-const TOTALTURNS = 42;
 
-CLEARBOARD = [
-    [0, 0, 0, 0, 0, 0],  // Column 0
-    [0, 0, 0, 0, 0, 0],  // Column 1
-    [0, 0, 0, 0, 0, 0],  // Column 2
-    [0, 0, 0, 0, 0, 0],  // Column 3
-    [0, 0, 0, 0, 0, 0],  // Column 4
-    [0, 0, 0, 0, 0, 0],  // Column 5
-    [0, 0, 0, 0, 0, 0],  // Column 6
-];
+const TOTALTURNS = 42;
 
 /*----- app's state (variables) -----*/
 let testVar = 1;
@@ -37,11 +28,19 @@ init();
 function init() {
      //rng to find 1st player 
      const randomIdx = Math.floor(Math.random() * 2);
-     if(randomIdx == 0){playerTurn = 1} else {playerTurn = -1}
+     if(randomIdx === 0){playerTurn = 1} else {playerTurn = -1}
     
     turnsTaken = 0;
-    board = CLEARBOARD;
-    playerTurn = 1;
+    board = [
+        [0, 0, 0, 0, 0, 0],  // Column 0
+        [0, 0, 0, 0, 0, 0],  // Column 1
+        [0, 0, 0, 0, 0, 0],  // Column 2
+        [0, 0, 0, 0, 0, 0],  // Column 3
+        [0, 0, 0, 0, 0, 0],  // Column 4
+        [0, 0, 0, 0, 0, 0],  // Column 5
+        [0, 0, 0, 0, 0, 0],  // Column 6
+    ];
+    
     winner = null;
 
     console.log("Game started/restarted");
@@ -60,10 +59,9 @@ function render() {
         });
         colBtns[columnidx].style.visibility = column.includes(0) ? "visible" : "hidden";
     });
+   
     //render message
-    if(playerTurn == 1){
-    headerEl.innerHTML = `Player ${playerTurn}'s turn! <br> Good Luck!`
-    } else {`Player 2's turn! <br> Change Later`}
+headerEl.innerHTML = `Player ${playerTurn === 1 ? 'RED' : 'BLACK'}'s turn!<br>Good Luck!`;
 
     console.log("Render has run / Page Updated");
 
