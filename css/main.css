@@ -4,13 +4,14 @@
 }
 body {
     display: flex;
+    /* background-color: lightgrey; */
+    background-image: url("https://wallpaperaccess.com/full/1853779.jpg");
+    image-rendering: pixelated;
     flex-direction: column;
     height: 100vh;
-    background-color: lightgrey;
+    
     justify-content: center;
     align-items: center;
-    background-image: url("tile.png");
-    image-rendering: crisp-edges;
 }
 
 main {
@@ -20,6 +21,8 @@ main {
 h2 {
     text-align: center;
     margin-top: 1vmin;
+    color: white;
+    -webkit-text-stroke: .1vh black;
 }
 
 #gameboard {
@@ -55,6 +58,10 @@ h2 {
     background-color: whitesmoke;
     align-content: center;
     height: 5vmin;
+}
+
+#choiceButtons > div:hover {
+    background-color: whitesmoke;
 }
 
 #replay {
