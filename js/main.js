@@ -1,14 +1,8 @@
 /*----- constants -----*/
 const colors = {
-<<<<<<< HEAD
     '1' : "#ffc2e2", //red
     '-1' : "black", //black
     '0' : "#f7fcff" //white
-=======
-  '-1': "black", //black
-  '0': "#f7fcff", //white
-  '1': "#ffc2e2" //red
->>>>>>> 04f7221aa20e2b37e0868428d37e1af549b2262e
 }
 
 //posibly set total turns to 41 

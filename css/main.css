@@ -16,18 +16,10 @@ main {
 
 h1 {
     text-align: center;
-<<<<<<< HEAD
-    margin-top: 1vmin;
-    font-weight: bold;
-    font-size: 5vh;
-    color: whitesmoke;
-    -webkit-text-stroke: .3vh black;
-=======
     color: white;
     font-size: 6vh;
     -webkit-text-stroke: .25vh black;
     background-color: rgba(44, 44, 44, 0.300);
->>>>>>> 04f7221aa20e2b37e0868428d37e1af549b2262e
 }
 
 #gameboard {
