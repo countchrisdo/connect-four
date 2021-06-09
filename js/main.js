@@ -1,10 +1,11 @@
 /*----- constants -----*/
 const colors = {
-  '-1': "#bbbaff", //black
+  '-1': "black", //black
   '0': "#f7fcff", //white
   '1': "#ffc2e2" //red
 }
 
+//posibly set total turns to 41 
 const TOTALTURNS = 42;
 
 /*----- app's state (variables) -----*/
@@ -71,11 +72,10 @@ function render() {
     header.innerText = "It's a Tie!!!";
   } else if (winner) {
     // is Winner truthy?, log winner
-    console.log(`Chicken Dinner Check: ${winner === 1 ? 'RED' : 'BLACK'}`);
-    headerEl.innerText = `Chicken Dinner Check: ${winner === 1 ? 'RED' : 'BLACK'}`;
+    headerEl.innerText = `Winner Winner, Chicken Dinner: ${winner === 1 ? 'RED' : 'BLACK'}`;
   } else {
     //no winner? continue game
-    headerEl.innerHTML = `Player ${playerTurn === 1 ? 'RED' : 'BLACK'}'s turn!<br>Good Luck!`;
+    headerEl.innerHTML = `Player ${playerTurn === 1 ? 'RED' : 'BLACK'}'s turn!`;
   }
   console.log("Render has run / Page Updated");
 
