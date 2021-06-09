@@ -1,15 +1,11 @@
 * {
     box-sizing: border-box;
-
 }
 body {
     display: flex;
-    /* background-color: lightgrey; */
     background-image: url("https://wallpaperaccess.com/full/1853779.jpg");
     image-rendering: pixelated;
     flex-direction: column;
-    height: 100vh;
-    
     justify-content: center;
     align-items: center;
 }
@@ -20,11 +16,18 @@ main {
 
 h1 {
     text-align: center;
+<<<<<<< HEAD
     margin-top: 1vmin;
     font-weight: bold;
     font-size: 5vh;
     color: whitesmoke;
     -webkit-text-stroke: .3vh black;
+=======
+    color: white;
+    font-size: 6vh;
+    -webkit-text-stroke: .25vh black;
+    background-color: rgba(44, 44, 44, 0.300);
+>>>>>>> 04f7221aa20e2b37e0868428d37e1af549b2262e
 }
 
 #gameboard {
@@ -62,14 +65,18 @@ h1 {
     background-color: whitesmoke;
     align-content: center;
     height: 5vmin;
+    cursor: pointer;
 }
 
 #choiceButtons > div:hover {
-    background-color: whitesmoke;
+    background-color: #0f70b7;
 }
 
 #replay {
     font-size: 2vmin;
+    background-repeat: no-repeat;
+    background-position: 50% 90;
+    
     font-weight: bold;
     padding: 2vmin;
     margin-top: 4vmin;
@@ -81,6 +88,17 @@ h1 {
   }
 
   #replay:hover {
-    background-color: rgba(0, 255, 255, 0.199);
+    background-color: rgb(47, 48, 48);
     color: black;
+  }
+
+  aside {
+    position: absolute;
+    bottom: 1vmin;
+    right: 10vmin;
+    width: 10vmin;
+  }
+
+  footer {
+    align-self: center;
   }
