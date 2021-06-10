@@ -1,11 +1,10 @@
 /*----- constants -----*/
 const colors = {
-    '1' : "#ffc2e2", //red
+    '1' : "#ffc2e2", //pink
     '-1' : "black", //black
     '0' : "#f7fcff" //white
 }
 
-//posibly set total turns to 41 
 const TOTALTURNS = 42;
 
 /*----- app's state (variables) -----*/
@@ -14,11 +13,18 @@ let board;
 let turnsTaken = 0;
 let playerTurn; // 1, -1
 let winner; // null, 1, -1, "T"
+let winc1 = 0; //red win count
+let winc2 = 0; //black win count
 
 /*----- cached element references -----*/
 const choiceEl = [...document.querySelectorAll("#choiceButtons > div")];
 const replayEl = document.getElementById("replay");
 const headerEl = document.getElementById("header");
+const pinkEl = document.querySelector(".pink");
+const blackEl = document.querySelector(".black");
+const audio = document.getElementById('clack');
+audio.volume = 0.5;
+const winnerSound = document.getElementById("winner");
 
 /*----- event listeners -----*/
 document.getElementById("choiceButtons").addEventListener("click", handleMove);
@@ -26,8 +32,8 @@ document.getElementById("replay").addEventListener("click", init);
 
 // /*----- functions -----*/
 init();
-
 function init() {
+  
   //rng to find 1st player 
   const randomIdx = Math.floor(Math.random() * 2);
   if (randomIdx === 0) {
@@ -36,6 +42,8 @@ function init() {
     playerTurn = -1
   }
 
+  winnerSound.pause();
+  headerEl.classList.remove("glow");
   turnsTaken = 0;
   winner = null;
   board = [
@@ -47,9 +55,6 @@ function init() {
     [0, 0, 0, 0, 0, 0], // Column 5
     [0, 0, 0, 0, 0, 0], // Column 6
   ];
-
-  console.log("Variables Reset");
-  console.log("Game started/restarted");
   render();
 }
 
@@ -66,24 +71,26 @@ function render() {
     choiceEl[columnidx].style.visibility = column.includes(0) ? "visible" : "hidden";
   });
 
-  //render header message (Tie, Win or Current Turn)
-  //tie game, log result
+  //render header message 
   if (winner === 'T') {
     header.innerText = "It's a Tie!!!";
   } else if (winner) {
-    // is Winner truthy?, log winner
-    headerEl.innerText = `Winner Winner, Chicken Dinner: ${winner === 1 ? 'RED' : 'BLACK'}`;
-  } else {
-    //no winner? continue game
-    headerEl.innerHTML = `Player ${playerTurn === 1 ? 'RED' : 'BLACK'}'s turn!`;
-  }
-  console.log("Render has run / Page Updated");
-
-  if (winner) {
+    winnerSound.play();
     replayEl.innerText = "Play Again";
+    headerEl.classList.add("glow");
+    if (winner === 1) {
+      ++winc1;
+      headerEl.innerText = `Winner Winner, Chicken Dinner: Pink`;
+      pinkEl.innerText = `${winc1}`;
+    } else if (winner === -1) {
+      ++winc2;
+      headerEl.innerText = `Winner Winner, Chicken Dinner: Black`;
+      blackEl.innerText = `${winc2}`;
+    } 
   } else {
+    headerEl.innerHTML = `Player ${playerTurn === 1 ? 'RED' : 'BLACK'}'s turn!`;
     replayEl.innerText = "Restart Game";
-  };
+  }
 }
 
 function handleMove(evt) {
@@ -97,12 +104,11 @@ function handleMove(evt) {
 
   colArr[rowIdx] = playerTurn;
   turnsTaken++;
-  console.log("Turns Taken: " + turnsTaken);
   playerTurn = playerTurn * -1;
-  console.log(`Player ${playerTurn === 1 ? 'RED' : 'BLACK'}'s turn!`);
 
   winner = getWinner(colIdx, rowIdx);
   render();
+  audio.play();
 }
 
 //Win logic
