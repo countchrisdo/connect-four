@@ -1,11 +1,10 @@
 # Connect Four!
 ---
-## Play:
-https://countchrisdo.github.com/connect-four
+## Play: https://countchrisdo.github.com/connect-four
 
 Local 2-Player *Connect Four* broswer game
 
-![The Game](https://i.imgur.com/5OxK73M.png)
+![connectfour](https://user-images.githubusercontent.com/7240924/121605143-de72f100-ca19-11eb-9197-8571d9874ec4.gif)
 
 ## Technologies used:
     HTML
@@ -17,6 +16,7 @@ Local 2-Player *Connect Four* broswer game
 *Connect four* of your game pieces vertically, horizontally, or diagonally before the other player does so.
 
 ### How to play?
+[Click here](https://countchrisdo.github.com/connect-four)
 At each turn, player will drop a game piece in one of the seven columns by clicking on the top of the chosen column.
 
 ### More info
@@ -24,6 +24,6 @@ Read [Wikipedia page on Connect Four](https://en.wikipedia.org/wiki/Connect_Four
 
 
 ## Next Steps:
-- Add an AI for a single player experience
-- Let the player choose the color peice they want
-- Let the player choose a name/s for the scoreboard
+- [ ] Add an AI for a single player experience
+- [ ] Let the player choose the color peice they want
+- [ ] Let the player choose a name/s for the scoreboard
