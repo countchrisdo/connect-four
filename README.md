@@ -1,6 +1,6 @@
 # Connect Four!
----
-## Play: https://countchrisdo.github.com/connect-four
+
+## Play: https://countchrisdo.github.io/connect-four/
 
 Local 2-Player *Connect Four* broswer game
 
@@ -16,7 +16,7 @@ Local 2-Player *Connect Four* broswer game
 *Connect four* of your game pieces vertically, horizontally, or diagonally before the other player does so.
 
 ### How to play?
-[Click here](https://countchrisdo.github.com/connect-four)
+[Click here](https://countchrisdo.github.io/connect-four)
 At each turn, player will drop a game piece in one of the seven columns by clicking on the top of the chosen column.
 
 ### More info
