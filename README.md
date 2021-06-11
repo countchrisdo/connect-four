@@ -13,7 +13,7 @@ Local 2-Player *Connect Four* broswer game
 
 ## Gameplay
 ### Objective
-*Connect four* of your game pieces vertically, horizontally, or diagonally before the other player does so.
+*Connect four* of your game pieces vertically, horizontally, or diagonally before the other player does so. POWEr
 
 ### How to play?
 [Click here](https://countchrisdo.github.io/connect-four)

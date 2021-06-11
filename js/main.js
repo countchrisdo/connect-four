@@ -13,7 +13,7 @@ let board;
 let turnsTaken = 0;
 let playerTurn; // 1, -1
 let winner; // null, 1, -1, "T"
-let winc1 = 0; //red win count
+let winc1 = 0; //pink win count
 let winc2 = 0; //black win count
 
 /*----- cached element references -----*/
@@ -88,7 +88,7 @@ function render() {
       blackEl.innerText = `${winc2}`;
     } 
   } else {
-    headerEl.innerHTML = `Player ${playerTurn === 1 ? 'RED' : 'BLACK'}'s turn!`;
+    headerEl.innerHTML = `Player ${playerTurn === 1 ? 'PINK' : 'BLACK'}'s turn!`;
     replayEl.innerText = "Restart Game";
   }
 }
