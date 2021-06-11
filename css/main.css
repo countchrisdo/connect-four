@@ -131,14 +131,43 @@ h1 {
     text-align: center;
 }
 
-aside {
-    position: absolute;
-    padding: 1vh;
-    bottom: 12vmin;
-    right: 2vmin;
-    width: 10vmin;
-    text-align: center;
+/* 1000px and below */
+@media screen and (max-width: 800px) {
+    aside {
+        display: none !important;
+    }
+  }
+
+/* 1000px and below */
+@media screen and (max-width: 1000px) {
+    aside {
+        position: absolute;
+        padding: 1vh;
+        bottom: 20vmin;
+        right: 2vmin;
+        width: 10vmin;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.25);
+    }
+  }
+
+/* 1000px and above */
+@media screen and (min-width: 1000px) {
+    aside {
+        position:fixed;
+        bottom: 30vmin;
+        right: 10vmin;
+        text-align: center;
+    }
+
+   aside h2 {
     background-color: rgba(0, 0, 0, 0.25);
+        font-size: 10vh;
+    }
+
+   aside img {
+        display: none;
+    }
 }
 
 footer {
@@ -153,4 +182,5 @@ footer {
 .black {
     color: black;    
     -webkit-text-stroke: .05vh whitesmoke;
+    
 }
