@@ -26,4 +26,4 @@ Read [Wikipedia page on Connect Four](https://en.wikipedia.org/wiki/Connect_Four
 ## Next Steps:
 - [ ] Add an AI for a single player experience
 - [ ] Let the player choose the color peice they want
-- [ ] Let the player choose a name/s for the scoreboard
+- [ ] Let the player choose name for the scoreboard
